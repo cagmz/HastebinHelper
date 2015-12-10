@@ -1,0 +1,9 @@
+{
+  "name" : "Hastebin Helper",
+  "version" : "0.1",
+  "permissions" :	["contextMenus",
+  					"http://hastebin.com/"],
+  "background": { "persistent": false,
+                  "scripts": ["background.js"]},
+  "manifest_version": 2
+}
