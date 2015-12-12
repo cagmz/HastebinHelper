@@ -1,3 +1,6 @@
+// Todo:
+//	- Preserve line breaks (and other formatting)
+
 // Set up menu and add listener to it
 chrome.runtime.onInstalled.addListener(init());
 // Add click event
@@ -13,6 +16,7 @@ function init() {
  function onClickHandler(info, tab) {
  	var post = new XMLHttpRequest();
  	var postData = JSON.stringify(info.selectionText);
+ 	postData = postData.substring(1, postData.length - 1);
  	var hastebinUrl = "http://hastebin.com/"
 	post.open("POST", "http://hastebin.com/documents", true);
 	post.setRequestHeader("Content-type", "application/json");
